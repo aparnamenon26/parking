@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Parking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.button {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.button:hover {
+  background-color: #f1f1f1;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-thumbs-o-up,.fa-car {font-size:200px}
+</style>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "Occupied spots " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="parking.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+    <a href="signup.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sign Up</a>
+    <a href="parkspot.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Parking Spots</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="login.html" class="w3-bar-item w3-button w3-padding-large">Login</a>
+    <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Sign Up</a>
+    <a href="parkspot.html" class="w3-bar-item w3-button w3-padding-large">Parking spots</a>
+  </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div>
+<center>
+<h2>Parking Spots</h2>
+<table>
+<tr>
+<td><button onclick="clickCounter()" type="button" class="button" >Parking Spot 1</button></td>
+<td><button class="button">Parking Spot 2</button></td>
+<td><button class="button">Parking Spot 3</button></td>
+</tr>
+<tr>
+<td><button class="button">Parking Spot 4</button></td>
+<td><button class="button">Parking Spot 5</button></td>
+<td><button class="button">Parking Spot 6</button></td>
+</tr>
+<tr>
+<td><button class="button">Parking Spot 7</button></td>
+<td><button class="button">Parking Spot 8</button></td>
+<td><button class="button">Parking Spot 9</button></td>
+</tr>
+<tr>
+<td><button class="button">Parking Spot 10</button></td>
+<td><button class="button">Parking Spot 11</button></td>
+<td><button class="button">Parking Spot 12</button></td>
+</tr>
+<tr>
+<td><button class="button">Parking Spot 13</button></td>
+<td><button class="button">Parking Spot 14</button></td>
+<td><button class="button">Parking Spot 15</button></td>
+</tr>
+</table>
+<div id="result"></div>
+</center>
+</div>
+</body>
+</html>
